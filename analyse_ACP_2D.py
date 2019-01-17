@@ -27,7 +27,7 @@ def plot_pca(cleared_dataset):
     principal_components = pca.fit_transform(cleared_dataset)
     principal_df = pd.DataFrame(data=principal_components, columns=['PC1', 'PC2'])
     principal_df = np.array(principal_df)
-    # ax.set_xlim(-1400, 2000)
+    ax.set_xlim(-10, 130)
     # ax.set_ylim(-10, 100)
     # ax.set_zlim(-10, 80)
     print(principal_df)
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # columns_to_use = usable_elts_of_size_4[0]
     # columns_to_use = usable_elts_of_size_3[0]
     # columns_to_use = usable_elts_of_size_2[0]
-    columns_to_use = ['carbohydrates_100g', 'proteins_100g']
+    columns_to_use = ['proteins_100g', 'energy_100g']
 
     data = load_data(columns_to_use)
 

@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from analyse_ACP_2D import plot_pca, plt
+from KMeans_2D import plot_kmeans_2d
 from tools import print_columns_names, clean_cells, delete_columns, data
 
 
@@ -45,7 +46,8 @@ def countries(columns_to_use):
 
 
 if __name__ == "__main__":
-    columns_to_use = ['countries_tags', 'carbohydrates_100g']
+    columns_to_use = ['countries_tags', 'saturated-fat_100g']
     cleared_dataset = countries(columns_to_use)
-    plot_pca(cleared_dataset)
+    # plot_pca(cleared_dataset)
+    plot_kmeans_2d(cleared_dataset, columns_to_use)
     plt.show()

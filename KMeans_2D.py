@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from tools import load_data
 
 
-def plot_kmeans_2d(cleared_dataset):
+def plot_kmeans_2d(cleared_dataset, columns_to_use):
     # Do the KMeans
     nb_clusters = 4
     random_state = 50
@@ -57,5 +57,5 @@ if __name__ == "__main__":
     #                   'polyunsaturated-fat_100g', 'fat_100g', 'saturated-fat_100g']
     # columns_to_use = ['sodium_100g', 'salt_100g']
     cleared_dataset = load_data(columns_to_use)
-    plot_kmeans_2d(cleared_dataset)
+    plot_kmeans_2d(cleared_dataset, columns_to_use)
     plt.show()
