@@ -37,6 +37,11 @@ def plot_pca(cleared_dataset):
     for row in range(len(cleared_dataset)):
         listX.append(principal_df[row][0])
         listY.append(principal_df[row][1])
+
+    variance1 = np.var(principal_components, axis=0)
+    ratio = variance1 / np.sum(variance1)
+    print("Importance axes: ", ratio)
+
     plt.plot(listX, listY, ".b")
 
 
@@ -44,8 +49,9 @@ if __name__ == "__main__":
     # columns_to_use = usable_elts_of_size_4[0]
     # columns_to_use = usable_elts_of_size_3[0]
     # columns_to_use = usable_elts_of_size_2[0]
-    columns_to_use = ['proteins_100g', 'energy_100g']
-
+    # columns_to_use = ['proteins_100g', 'energy_100g']
+    columns_to_use = ['energy_100g', 'fat_100g', 'saturated-fat_100g']
+    # columns_to_use = ['serving_quantity', 'energy_100g', 'fat_100g', 'saturated-fat_100g']
     data = load_data(columns_to_use)
 
     plot_pca(data)

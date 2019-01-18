@@ -66,8 +66,9 @@ def plot_kmeans_3d(cleared_dataset):
 
 
 if __name__ == "__main__":
-    columns_to_use = ['carbohydrates_100g', 'proteins_100g', 'salt_100g']
-    # columns_to_use = ['energy_100g', 'carbohydrates_100g', 'fat_100g']
+    # columns_to_use = ['carbohydrates_100g', 'proteins_100g', 'salt_100g']
+    columns_to_use = ['serving_quantity', 'energy_100g', 'saturated-fat_100g']
+    # columns_to_use = ['serving_quantity', 'energy_100g', 'fat_100g', 'saturated-fat_100g']
     data = load_data(columns_to_use)
     plot_kmeans_3d(data)
     plt.show()

@@ -51,8 +51,8 @@ def plot_kmeans_2d(cleared_dataset, columns_to_use):
 
 
 if __name__ == "__main__":
-    columns_to_use = ['carbohydrates_100g', 'proteins_100g']
-    # columns_to_use = ['energy_100g', 'carbohydrates_100g']
+    # columns_to_use = ['carbohydrates_100g', 'proteins_100g']
+    columns_to_use = ['energy_100g', 'serving_quantity']
     # columns_to_use = ['carbohydrates_100g', 'proteins_100g', 'sugars_100g', 'monounsaturated-fat_100g',
     #                   'polyunsaturated-fat_100g', 'fat_100g', 'saturated-fat_100g']
     # columns_to_use = ['sodium_100g', 'salt_100g']
